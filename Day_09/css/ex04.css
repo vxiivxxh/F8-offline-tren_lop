@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  background: #2a2a2a;
+  color: #fff;
+  padding: 15px;
+  translate: -100%;
+  transition: 0.5s;
+}
+.menu .menu-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.menu .menu-heading button {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(85, 24, 24, 0.277);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+input:checked ~ .menu {
+  translate: 0;
+}
+
+input:checked + .overlay {
+  visibility: visible;
+  opacity: 1;
+}

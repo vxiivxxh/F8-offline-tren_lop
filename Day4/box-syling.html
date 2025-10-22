@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Box Styling</title>
+
+    <style>
+      p {
+        color: white;
+        font-size: 36px;
+        font-style: italic;
+        text-indent: 1em;
+        width: 800px;
+        height: 200px;
+        display: table-cell;
+        vertical-align: middle;
+        transform: rotate(20deg);
+        margin-top: 200px;
+
+        /* đường viền */
+        border: solid 1px gray;
+        border-radius: 5px;
+        transform: rotate(-45deg);
+
+        /* hiệu ứng bóng râm */
+        box-shadow: 30px 20px 10px gray; /*right bottom blur color*/
+        background-color: darkblue;
+
+        /* lề trong lề ngoài */
+        padding: 10px;
+        margin: 30px auto; /* cho ra giữa màn hình */
+        border: 7px solid brown;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="display: table">
+      <p>
+        "Thà một phút huy hoàng rồi vụt tắt.<br />
+        Còn hơn buồn le lói suốt trăm năm."<br /><span
+          style="padding-left: 400px"
+          >-Xuân Diệu-</span
+        >
+      </p>
+    </div>
+  </body>
+</html>

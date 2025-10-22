@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header.header {
+  background-image: url(https://themazine.com/html/scholars-lms/images/home/banner-2.jpg);
+  background-size: cover;
+  font-family: "PT Sans", sans-serif;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+.header-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+}

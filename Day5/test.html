@@ -1,0 +1,98 @@
+<ul style="list-style: circle">
+  <li>HTML 1</li>
+  <li>CSS 1</li>
+  <li>JS 1</li>
+</ul>
+
+<ul style="list-style: square">
+  <li>HTML 2</li>
+  <li>CSS 2</li>
+  <li>JS 2</li>
+</ul>
+
+<ul style="list-style: none">
+  <li>&#128526;HTML 3</li>
+  <li>&#128526;CSS 3</li>
+  <li>&#128526;JS 3</li>
+</ul>
+
+<!-- VD 1: -->
+<!-- <div class="flex-container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item special">4</div>
+</div>
+<style>
+  .flex-container {
+    background-color: lightblue;
+    display: flex;
+  }
+  .item {
+    background: gray;
+    border: 1px solid lightgray;
+    margin: 5px;
+    font-size: 17;
+  }
+  .special {
+    margin-left: auto;
+  }
+</style> -->
+
+<!-- Vd 2: Thuộc tính này flex-grow(tăng trưởng) chỉ định mức độ một mục flex sẽ tăng lên so với các mục flex còn lại.Giá trị phải là số, giá trị mặc định là 0.
+ 
+<div class="flex-container">
+  <div class="item" style="flex-grow: 1">1</div>
+  <div class="item" style="flex-grow: 1">2</div>
+  <div class="item" style="flex-grow: 3">3</div>
+  <div class="item special">4</div>
+</div>
+<style>
+  .flex-container {
+    background-color: lightblue;
+    display: flex;
+  }
+  .item {
+    background: gray;
+    border: 1px solid lightgray;
+    margin: 5px;
+    font-size: 17;
+  }
+  /* .special {
+    margin-left: auto; 
+  } */
+</style>
+-->
+
+<div class="flex-container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item special">4</div>
+</div>
+<style>
+  .flex-container {
+    background-color: lightblue;
+    display: flex;
+    /* flex-direction: row; thành cột thành hàng */
+    justify-content: start;
+    padding: 5px;
+  }
+  .item {
+    background: gray;
+    border: 1px solid lightgray;
+    margin: 5px;
+    font-size: 17;
+    flex-grow: 3.3;
+  }
+  /* Với thiết bị có độ rộng tối đâ 800px thì thay đổi chiều flex các phần tử con bên trong flex box */
+  @media (max-width: 600px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+  /* .special {
+    margin-left: auto;
+  } */
+</style>

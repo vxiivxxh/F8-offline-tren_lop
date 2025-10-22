@@ -1,0 +1,14 @@
+p{
+    /* display: none; */
+    /* visibility: hidden; */
+    opacity: 0;
+}
+/* display: none --> ẩn phần tử html làm mất không gian
+visibility:hidden --> ẩn phần tử html không làm mất không gian
+opacity: 0 --> Làm mờ phần tử html
+
+
+Sự khác nhau giữa visibility va opacity
+-visibility --> Làm mắt khả năng truy cập, tương tác
+-opacity --> Vẫn còn khả năng try câp (Tương tác đc)*/
+

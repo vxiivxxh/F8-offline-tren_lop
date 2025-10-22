@@ -1,0 +1,36 @@
+.checkbox-label {
+  border: 2px solid red;
+  width: 400px;
+}
+
+span {
+  position: relative;
+}
+
+.checkbox-label span::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 2px solid green;
+}
+.checkbox-label span::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  border: 1px solid lightgreen;
+  border-width: 0 0 4px 4px;
+  rotate: -45deg;
+  position: absolute;
+  top: -4px;
+  left: 5px;
+}
+
+.checkbox-label input:checked + span::after {
+  display: inline-block;
+}
+
+.checkbox-label input + span::after {
+  display: none;
+}

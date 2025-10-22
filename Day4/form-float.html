@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Biểu Mẫu Đăng Ký</title>
+  </head>
+  <body>
+    <form class="container">
+      <fieldset>
+        <legend>Thông tin tài khoản</legend>
+        <label for="">Họ và tên: </label>
+        <input type="text" name="hoVaTen" id="hoVaTen" />
+        <label for="">Hòm thư: </label>
+        <input type="email" name="email" id="email" />
+        <label for="">Mật khẩu: </label>
+        <input type="password" name="matKhau" id="matKhau" />
+        <label for="">Xác nhận mật khẩu: </label>
+        <input type="password" name="xacNhanMatKhau" id="xacNhanMatKhau" />
+      </fieldset>
+      <fieldset>
+        <legend>Thông tin cá nhân</legend>
+        <label>Giới tính: </label>
+        <input type="radio" name="gioiTinh" id="nam" /> <span>Nam</span>
+        <input type="radio" name="gioiTinh" id="nu" /><span>Nữ</span>
+        <input type="radio" name="gioiTinh" id="khac" /><span>Khác</span>
+        <label>Sở thích: </label>
+        <input type="checkbox" name="soThich" id="theThao" /><span
+          >Thể thao</span
+        >
+        <input type="checkbox" name="soThich" id="amNhac" /><span>Âm nhạc</span>
+        <input type="checkbox" name="soThich" id="duLich" /><span>Du lịch</span>
+        <label for="">Ngày sinh: </label>
+        <input type="date" name="ngaySinh" id="ngaySinh" />
+        <label for="">Quốc gia:</label>
+        <select name="quocGia" id="quocGia">
+          <option value="vn">Việt Nam</option>
+          <option value="us">Mỹ</option>
+          <option value="kr">Hàn Quốc</option>
+          <option value="jp">Nhật Bản</option>
+          <option value="rf">Liên Bang Nga</option>
+        </select>
+        <label for="">Số điện thoại: </label>
+        <input type="tel" name="soDienThoai" id="soDienThoai" />
+        <label for="">Địa chỉ liên hệ:</label>
+        <textarea name="diaChi" id="diaChi" cols="40" rows="3"></textarea>
+        <div>
+          <button type="submit" onclick=" alert('Đã gửi thành công')">
+            Gửi
+          </button>
+          <button type="reset" onclick=" alert('Mời nhập lại')">Huỷ</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <style>
+      /* Đổi sang thẻ khối,nổi bên trái */
+      label,
+      input,
+      span,
+      textarea,
+      select {
+        display: block;
+        float: left;
+        margin-bottom: 0.5em;
+      }
+      /* Xoá trái các thẻ label */
+      label {
+        clear: left;
+        width: 11em;
+        margin-right: 0.5em;
+        text-align: right;
+      }
+      .container div {
+        text-align: center;
+        clear: both;
+      }
+      /* Chỉ định độ rộng cụ thể của thẻ span để căn chỉnh đẹp mắt các ô nhập liệu*/
+      span {
+        width: 4em;
+      }
+    </style>
+  </body>
+</html>
+<!-- Chú thích: -->

@@ -1,0 +1,12 @@
+p {
+  color: rgb(15, 164, 177);
+  font-size: 25px;
+  font-style: italic;
+  background-color: palegoldenrod;
+}
+
+div {
+  color: brown;
+  font-size: 30px;
+  background-color: lightgrey;
+}

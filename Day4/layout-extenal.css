@@ -1,0 +1,22 @@
+header {
+  background-color: pink;
+}
+
+div#content {
+  width: 80%;
+  float: left;
+}
+
+div#content section {
+  background-color: lightgreen;
+}
+
+main > aside {
+  width: 20%;
+  float: right;
+  background-color: gray;
+}
+
+#content #firstSection {
+  background-color: lightcoral;
+}
