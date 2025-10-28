@@ -8,7 +8,7 @@ Viết cmt nhiều dòng
 Viết cmt nhiều dòng
 */
 
-// Biến: Dùng Để lưu trữ giá trị tamj thời (ở RAM)
+// Biến: Dùng Để lưu trữ giá trị tamj thời (ở RAM) (đặt tên dùng danh từ)
 // Cú pháp: let tenbien hoặc let tenbien=giatri
 /*Quy ước đặt tên biến:
 -Chấp nhận: số, chữ thường, chữ hoa, gạch dưới và $
