@@ -1,5 +1,12 @@
 //Hàm
-//1.
+
+//1. expression function
+// const showMessage = function () {
+//   console.log("a");
+// };
+// if (typeof showMessage === "function") {
+//   showMessage();
+// }
 
 //2.callback function (Truyền vào )
 // const doSomething = function () {
