@@ -1,6 +1,6 @@
 //Hàm
 
-//1. expression function
+//1. expression function (Hàm biểu thức(tránh đc tình trạng ghi đè))
 // const showMessage = function () {
 //   console.log("a");
 // };
