@@ -1,42 +1,69 @@
 let keyword = "LOREM";
-let content = `Xin chào anh em Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Vel debitis a, iusto ad earum id quae repellat consequuntur quidem.
-Obcaecati in facilis rerum enim totam, a ipsam amet maxime! Molestiae vel
-eaque porro distinctio praesentium nostrum suscipit doloremque
-necessitatibus accusantium, earum ea. Xin chào anh em Lorem ipsum dolor
-sit amet consectetur adipisicing elit. Vel debitis a, iusto ad earum id
-quae repellat consequuntur quidem. Obcaecati in facilis rerum enim totam,
-a ipsam amet maxime! Molestiae vel eaque porro distinctio praesentium
-nostrum suscipit doloremque necessitatibus accusantium, earum ea. Xin chào
-anh em Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-debitis a, iusto ad earum id quae repellat consequuntur quidem. Obcaecati
-in facilis rerum enim totam, a ipsam amet maxime! Molestiae vel eaque
-porro distinctio praesentium nostrum suscipit doloremque necessitatibus
-accusantium, earum ea. Xin chào anh em Lorem ipsum dolor sit amet
-consectetur adipisicing elit. Vel debitis a, iusto ad earum id quae
-repellat consequuntur quidem. Obcaecati in facilis rerum enim totam, a
-ipsam amet maxime! Molestiae vel eaque porro distinctio praesentium
-nostrum suscipit doloremque necessitatibus accusantium, earum ea.`;
+let content = `Xin chào anh em Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laborum perspiciatis maiores autem suscipit eos ut tenetur, sequi aliquid sint repellendus eveniet aperiam unde aliquam expedita itaque quae molestiae! Xin chào anh em Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laborum perspiciatis maiores autem suscipit eos ut tenetur, sequi aliquid sint repellendus eveniet aperiam unde aliquam expedita itaque quae molestiae! Xin chào anh em Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laborum perspiciatis maiores autem suscipit eos ut tenetur, sequi aliquid sint repellendus eveniet aperiam unde aliquam expedita itaque quae molestiae! `;
+
+//B1: Xác định vị trí của keyword trong content
+//B2: Tách chuỗi content thành 3 đoạn và bọc span vào keyword
 
 let newContent = "";
-
+//Tìm lần 1
 let position = content.toLowerCase().indexOf(keyword.toLowerCase());
-let count = "0";
+let count = 0;
 while (position !== -1) {
   newContent +=
     content.slice(0, position) +
     "<span>" +
     content.slice(position, position + keyword.length) +
     "</span>";
-
   //Cắt bỏ đoạn đầu khỏi content
   content = content.slice(position + keyword.length);
-  //Tìm lại keyword trong content mới(content đã bị cắt)
+  //Tìm lại keyword trong content mới (content đã bị cắt)
+  position = content.toLowerCase().indexOf(keyword.toLowerCase());
+  count++;
 }
+
+newContent += content; //Nối đoạn content còn thiếu (do bị thoát vòng lặp)
+
 document.body.innerHTML = `
-<p>Từ khoá: ${keyword}</p>
-<p>${content}</p>
-<p>Đã tìm thấy ${count} kết quả</p>`;
+<p>Từ khóa: ${keyword}</p>
+<p>${newContent}</p>
+<p>Đã tìm thấy ${count} kết quả</p>
+`;
+
+// //Tìm lần 2
+// position = content.toLowerCase().indexOf(keyword.toLowerCase());
+// newContent +=
+//   content.slice(0, position) +
+//   "<span>" +
+//   content.slice(position, position + keyword.length) +
+//   "</span>";
+// content = content.slice(position + keyword.length);
+
+// //Tìm lần 3
+// position = content.toLowerCase().indexOf(keyword.toLowerCase());
+// newContent +=
+//   content.slice(0, position) +
+//   "<span>" +
+//   content.slice(position, position + keyword.length) +
+//   "</span>";
+// content = content.slice(position + keyword.length);
+
+//Nguyên tắc khi tìm kiếm
+// - Không phân biệt hoa thường
+// - Không được thay đổi lại văn bản gốc
+
+/*
+Lần 1:
+newContent = "Xin chào anh em <span>Lorem</span>"
+content = " ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laborum perspiciatis maiores autem suscipit eos ut tenetur, sequi aliquid sint repellendus eveniet aperiam unde aliquam expedita itaque quae molestiae! Xin chào anh em Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laborum perspiciatis maiores autem suscipit eos ut tenetur, sequi aliquid sint repellendus eveniet aperiam unde aliquam expedita itaque quae molestiae! Xin chào anh em Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laborum perspiciatis maiores autem suscipit eos ut tenetur, sequi aliquid sint repellendus eveniet aperiam unde aliquam expedita itaque quae molestiae!"
+
+Lần 2:
+newContent = "Xin chào anh em <span>Lorem</span> ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laborum perspiciatis maiores autem suscipit eos ut tenetur, sequi aliquid sint repellendus eveniet aperiam unde aliquam expedita itaque quae molestiae! Xin chào anh em <span>Lorem</span>"
+content = " ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laborum perspiciatis maiores autem suscipit eos ut tenetur, sequi aliquid sint repellendus eveniet aperiam unde aliquam expedita itaque quae molestiae! Xin chào anh em Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laborum perspiciatis maiores autem suscipit eos ut tenetur, sequi aliquid sint repellendus eveniet aperiam unde aliquam expedita itaque quae molestiae!"
+
+Lần 3:
+
+Lần 4:
+*/
 
 //Bài tập 2: Kiểm tra độ mạnh yếu mật khẩu(Không dùng biểu thức chính quy)
 //- Từ 8 ký tự trở lên
