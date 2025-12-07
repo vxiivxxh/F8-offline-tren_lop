@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+<style type="text/tailwindcss">
+      .btn-active {
+        @apply bg-yellow-400;
+      }
+    </style>
+</head>
+  <body>
+    <main class="max-w-[80%] mx-auto py-3">
+      <h1 class="text-3xl font-bold text-center">Blogs</h1>
+      <input
+        type="search"
+        placeholder="Search..."
+        class="js-search border border-gray-300 w-full py-2 px-3 outline-none my-3"
+      />
+      <button
+        class="cursor-pointer border border-gray-300 py-2 px-5 hover:bg-green-600"
+      >
+        Thêm mới
+      </button>
+      <div class=" js-sort flex gap-3 mt-3">
+        <button data-sort="desc" class="btn-active cursor-pointer border border-gray-300 py-2 px-5">
+          Mới nhất
+        </button>
+        <button data-sort="desc" class="cursor-pointer border border-gray-300 py-2 px-5">
+          Cũ nhất
+        </button>
+      </div>
+      <div class="js-post-list">
+       <div class="js-loading"></div>
+       <div class="js-paginate"></div>
+    </main>
+    <script src="js/ex02.js"></script>
+  </body>
+</html>
